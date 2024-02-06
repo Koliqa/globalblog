@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="news_line" style="padding: 0 0 0 3%;">
+	Автор: {{ username }}
+	<img src="/static/img/{{ number }}.jpg" style="width: 94%;">
+	<br>
+	{% for link in add %}
+		{% if loop.first %}
+			Дополнительно:<br>
+		{% endif %}
+		<a href={{ link["link"] }}>{{ link["text"] }}</a><br>
+	{% endfor %}
+	<br>
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 120%;
+}
+
+body {
+	background-color: #999999;
+}
+
+.lmenu {
+	width: max(20%, 200px);
+	height: 100%;
+	float: left;
+	background-color: #888888;
+	position: fixed;
+	padding-bottom: 40%;
+}
+
+a {
+	color: #DDDDDD;
+}
+
+a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.news_line {
+	margin-left: 20%;
+	width: 60%;
+	min-height: 120%;
+	background-color: #AAAAAA;
+	padding: 20px 0 15px 3%;
+	float: left;
+}
+
+.news {
+	margin-bottom: 20px;
+	width: 94%;
+	background-color: #BBBBBB;
+}
+
+.news a {
+	float: right;
+}
+
+.footer {
+	width: 100%;
+	height: 20px;
+	margin-top: calc(100vh - 20px);
+	background-color: #565656;
+	position: fixed;
+}
+
+.footer img {
+	float: right;
+}

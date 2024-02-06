@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="news_line">
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+	    {% for field in form if field.name != 'csrf_token' %}
+			{% if field != form.submit %}
+				{{ field.label() }}
+				{% if field != form.agree %}
+					<br>
+				{% endif %}
+			{% endif %}
+	        {{ field() }}
+	        {% for error in field.errors %}
+	            <div class="error">
+	            	{{ error }}
+	        	</div>
+	        {% endfor %}<br><br>
+	    {% endfor %}
+	</form>
+</div>
+
+{% endblock %}

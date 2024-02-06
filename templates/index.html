@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<div class="news_line" style="float: left;">
+		{% for info in infos %}
+			<div class="news">
+				{{ info["title"] }}
+				<a href={{info["link"]}}>Читать далее>></a>
+			</div>
+		{% endfor %}
+	</div>
+	<div id="advertisment" class="carousel slide carousel-fade" data-ride="carousel" style="float: right; max-height: 10%; max-width: 15%; margin: 2.5% 2.5% 0 0;">
+	  <div class="carousel-inner">
+	  	{% for ad in ads %}
+	  		{% if loop.first %}
+			    <div class="carousel-item active" data-bs-interval="5000">
+				  	<a href={{ ad["link"] }} target="_blank">
+				      <img class="d-block w-100" src={{ ad["img"] }}>
+				    </a>
+			    </div>
+			{% else %}
+			    <div class="carousel-item" data-bs-interval="5000">
+				  	<a href={{ ad["link"] }} target="_blank">
+				      <img class="d-block w-100" src={{ ad["img"] }}>
+				    </a>
+			    </div>
+			{% endif %}
+		{% endfor %}
+	  </div>
+	</div>
+
+{% endblock %}

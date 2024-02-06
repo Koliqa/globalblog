@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="news_line">
+    <form action="" method="post" enctype="multipart/form-data">
+    	<input type="text" name="title" placeholder="Заголовок" required>
+    	<input type="file" name="image" required><br><br>
+    	<input type="text" name="t1" placeholder="Текст"><input type="text" name="l1" placeholder="Ссылка"><br>
+    	<input type="text" name="t2" placeholder="Текст"><input type="text" name="l2" placeholder="Ссылка"><br>
+    	<input type="text" name="t3" placeholder="Текст"><input type="text" name="l3" placeholder="Ссылка"><br>
+    	<input type="text" name="t4" placeholder="Текст"><input type="text" name="l4" placeholder="Ссылка"><br>
+    	<input type="text" name="t5" placeholder="Текст"><input type="text" name="l5" placeholder="Ссылка"><br>
+    	<br>
+        <input type="password" name="key" placeholder="key" required><br><br>
+        <button type="submit">Отправить</button>
+	</form>
+</div>
+
+{% endblock %}
